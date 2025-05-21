@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo | TipsBook</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+   body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 90vh;
+      padding: 0 10px;
+    }
+    header img {
+      width: 190px;
+      margin: 80px auto;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      max-width: 700px;
+      font-size: 1.8em;
+      margin: 0 auto 30px;
+    }
+
+    .signature {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3.5em;
+      margin-bottom: 30px;
+    }
+
+    .accordion {
+      width: 100%;
+      max-width: 700px;
+      text-align: left;
+    }
+
+    .accordion-item {
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .accordion-title {
+      padding: 15px;
+      background-color: #eee;
+      cursor: pointer;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .accordion-title:hover {
+      background-color: #ddd;
+    }
+
+    .accordion-content {
+      display: none;
+      padding: 20px;
+      background-color: #fff;
+    }
+
+    .accordion-content img {
+      width: 150px;
+      margin-right: 20px;
+      vertical-align: middle;
+      border-radius: 8px;
+    }
+
+    .book-link {
+      font-size: 1.1em;
+      text-decoration: none;
+      color: #5f54dd;
+      font-weight: bold;
+    }
+
+    .social-icons {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .social-icons a {
+      color: #000;
+      font-size: 28px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      color: #5f54dd;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="tipsbook.svg" alt="Logo TipsBook">
+    <p>O TipsBook é um projeto feito sob medida para aqueles que desejam mergulhar nos estudo, complementados com explicações para uma compreensão ainda mais profunda e significativa. Nossa abordagem é única, fornecendo uma análise detalhada dos conceitos apresentados, especialmente nas áreas de tecnologia, empreendedorismo, matemática e física e gestão de projetos.</p>
+    <div class="signature">TipsBook</div>
+  </header>
+
+  <section class="accordion">
+    <!-- Livro 1 -->
+    <div class="accordion-item">
+      <div class="accordion-title" onclick="toggleAccordion(this)">
+        Catalogo de Ebook
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="accordion-content">
+        <img src="aprendendo-python-capa.svg" alt="Aprendendo Python">
+        <a class="book-link" href="https://aprendendo-python.vidal.press/" target="_blank">📖 Acessar eBook</a>
+      </div>
+    </div>
+
+    <!-- Adicione mais livros aqui -->
+  
+  </section>
+
+  <div class="social-icons">
+    <a href="https://www.instagram.com/canaltipsbook/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.twitch.tv/tipsbook" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
+    <a href="https://www.youtube.com/@davinyleticia" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <footer>
+    <p>hello@vidal.press</p>
+  </footer>
+
+  <script>
+    function toggleAccordion(element) {
+      const content = element.nextElementSibling;
+      const icon = element.querySelector('i');
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.classList.remove("fa-chevron-up");
+        icon.classList.add("fa-chevron-down");
+      } else {
+        content.style.display = "block";
+        icon.classList.remove("fa-chevron-down");
+        icon.classList.add("fa-chevron-up");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
